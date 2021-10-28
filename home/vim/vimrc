@@ -1,0 +1,54 @@
+"Change directory of .swp files
+set directory=$HOME/.vim/swp//
+
+"Convert tabs to spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"Open buffers without saving
+set hidden
+
+"Make splits more natural
+set splitbelow
+set splitright
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap _ <C-W>_
+"Easier tab navigation
+map <Tab> :bnext<CR>
+map <S-Tab> :bprevious<CR>
+"Kill buffer
+nnoremap <C-k> :bd<CR>
+
+"Line numbers
+"set relativenumber
+set number
+
+"set termguicolors
+"set t_Co=256
+set hls
+
+syntax on
+"colorscheme ron "soda shades_of_purple
+
+"colorscheme default
+"set notermguicolors t_Co=16
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = "256_noir"
+let g:airline#extensions#tabline#enabled = 1
+"let g:shades_of_purple_airline = 1
+"let g:airline_theme='shades_of_purple'
+let python_highlight_all = 1
+"let base16colorspace=256  " Access colors present in 256 colorspace
+
+" C++
+"let g:cpp_class_scope_highlight = 1
+"let g:cpp_member_variable_highlight = 1
+"let g:cpp_class_decl_highlight = 1
+"let g:cpp_posix_standard = 1
+"let g:cpp_experimental_template_highlight = 1
+"let g:cpp_concepts_highlight = 1
