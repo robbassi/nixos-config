@@ -10,6 +10,7 @@ with {
   imports = [
     "${homeManager}/nixos"
     ./vim
+    ./git
   ];
 
   home-manager.users.rob = {
@@ -23,7 +24,6 @@ with {
         tree
         wget
         google-chrome
-        git
       ];
     };
   };

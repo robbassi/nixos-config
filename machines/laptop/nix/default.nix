@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  nix.buildCores = 4;
+}
