@@ -4,5 +4,6 @@ import ./make-system.nix {
     ./machines/desktop/boot
     ./machines/desktop/networking
     ./machines/desktop/nix
+    ./machines/desktop/services
   ];
 }

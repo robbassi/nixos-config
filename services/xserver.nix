@@ -3,7 +3,6 @@
 {
   services.xserver = {
     enable = true;
-    videoDrivers = [ "nvidia" ];
 
     # Enable the GNOME Desktop Environment.
     displayManager.gdm.enable = true;
