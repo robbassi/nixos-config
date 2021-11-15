@@ -11,6 +11,7 @@ with {
     "${homeManager}/nixos"
     ./vim
     ./git
+    ./vscode
   ];
 
   home-manager.users.rob = {
