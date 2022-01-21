@@ -9,27 +9,28 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/80777592-4a10-47a7-b95f-6de6d40b2772";
+    { device = "/dev/disk/by-uuid/d721ffa5-6e40-4c93-919b-35006212aaec";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-uuid/bc96f4f6-8c39-44a4-a77e-5c670ec704cd";
+  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-uuid/34f93a24-978f-4606-8faa-137436d4d3ed";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3835-96A1";
+    { device = "/dev/disk/by-uuid/CCDE-3061";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6c999914-b37f-4474-8a40-4b5ae58b09d7"; }
+    [ { device = "/dev/disk/by-uuid/bd935c28-7235-4dae-aa7f-79f72aea1ecb"; }
     ];
 
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
 }
