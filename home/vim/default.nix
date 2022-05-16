@@ -9,6 +9,9 @@
       nerdcommenter
       rainbow_parentheses
       airline
+      fzf-vim
+      nord-vim
+      YouCompleteMe
     ];
 
     extraConfig = builtins.readFile ./vimrc;

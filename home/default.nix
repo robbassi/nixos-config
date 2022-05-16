@@ -9,9 +9,12 @@ with {
 {
   imports = [
     "${homeManager}/nixos"
+    ./bat
     ./vim
+    ./tmux
     ./git
     ./vscode
+    ./alacritty
   ];
 
   home-manager.users.rob = {
@@ -23,6 +26,8 @@ with {
       packages = with pkgs; [
         htop
         tree
+        ripgrep
+        ag
         wget
         google-chrome
       ];

@@ -23,6 +23,8 @@ map <Tab> :bnext<CR>
 map <S-Tab> :bprevious<CR>
 "Kill buffer
 nnoremap <C-k> :bd<CR>
+"Clear search results
+nnoremap \ :noh<return>
 
 "Line numbers
 "set relativenumber
@@ -33,11 +35,11 @@ set number
 set hls
 
 syntax on
-"colorscheme ron "soda shades_of_purple
+colorscheme nord
 
 "colorscheme default
 "set notermguicolors t_Co=16
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 "let g:airline_theme = "256_noir"
 let g:airline#extensions#tabline#enabled = 1
 "let g:shades_of_purple_airline = 1
@@ -52,3 +54,12 @@ let python_highlight_all = 1
 "let g:cpp_posix_standard = 1
 "let g:cpp_experimental_template_highlight = 1
 "let g:cpp_concepts_highlight = 1
+
+" Haskell
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
