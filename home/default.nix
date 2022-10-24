@@ -11,6 +11,7 @@ with {
     "${homeManager}/nixos"
     ./bat
     ./vim
+    ./nvim
     ./tmux
     ./git
     ./vscode
@@ -27,9 +28,10 @@ with {
         htop
         tree
         ripgrep
-        ag
+        silver-searcher
         wget
         google-chrome
+        fixedsys-excelsior
       ];
     };
   };

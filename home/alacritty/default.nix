@@ -10,6 +10,16 @@
       key_bindings = [
         { key = "N"; mods = "Control"; action = "SpawnNewInstance"; }
       ];
+      font = {
+        normal = {
+          family = "Fixedsys Excelsior 3.01";
+          style = "Regular";
+        };
+        bold = {
+          family = "Fixedsys Excelsior 3.01";
+          style = "Regular";
+        };
+       };
       colors = {
         primary = {
           background = "#2e3440";
