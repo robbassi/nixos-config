@@ -12,6 +12,7 @@
       fzf-vim
       nord-vim
       YouCompleteMe
+      vim-lsp
     ];
 
     extraConfig = builtins.readFile ./vimrc;
