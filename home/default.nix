@@ -11,11 +11,11 @@ with {
     "${homeManager}/nixos"
     ./bat
     ./vim
-    ./nvim
     ./tmux
     ./git
     ./vscode
     ./alacritty
+    ./virtualbox
   ];
 
   home-manager.users.rob = {

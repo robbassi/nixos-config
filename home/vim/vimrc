@@ -6,6 +6,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+"Highlight search
+set hls
+
 "Open buffers without saving
 set hidden
 
@@ -15,6 +18,9 @@ set splitright
 
 "Show the 80 char line
 set colorcolumn=80
+
+"Highlight cursor line
+set cursorline
 
 "Mappings
 
@@ -45,24 +51,11 @@ set number
 
 " Syntax highlighting
 syntax on
-colorscheme nord
+colorscheme ron
 
 " Airline
-let g:airline_powerline_fonts = 1
-"let g:airline_theme = "256_noir"
+let g:airline_theme = "base16"
 let g:airline#extensions#tabline#enabled = 1
-"let g:shades_of_purple_airline = 1
-"let g:airline_theme='shades_of_purple'
-let python_highlight_all = 1
-"let base16colorspace=256  " Access colors present in 256 colorspace
-
-" C++
-"let g:cpp_class_scope_highlight = 1
-"let g:cpp_member_variable_highlight = 1
-"let g:cpp_class_decl_highlight = 1
-"let g:cpp_posix_standard = 1
-"let g:cpp_experimental_template_highlight = 1
-"let g:cpp_concepts_highlight = 1
 
 " Haskell
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
@@ -74,13 +67,13 @@ let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 " LSP configuration
-if executable('haskell-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'haskell-language-server',
-        \ 'cmd': {server_info->['haskell-language-server', '--lsp']},
-        \ 'allowlist': ['haskell'],
-        \ })
-endif
+" if executable('haskell-language-server')
+"     au User lsp_setup call lsp#register_server({
+"         \ 'name': 'haskell-language-server',
+"         \ 'cmd': {server_info->['haskell-language-server', '--lsp']},
+"         \ 'allowlist': ['haskell'],
+"         \ })
+" endif
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -95,8 +88,8 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> [g <plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
-    nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+    " nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    " nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 endfunction
 
 augroup lsp_install
