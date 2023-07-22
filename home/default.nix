@@ -2,7 +2,7 @@
 
 with {
   homeManager = builtins.fetchTarball {
-    url = "https://github.com/rycee/home-manager/archive/release-21.05.tar.gz";
+    url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   };
 };
 
@@ -24,7 +24,9 @@ with {
     };
 
     home = {
+      stateVersion = "21.05";
       packages = with pkgs; [
+        fd
         htop
         tree
         ripgrep
