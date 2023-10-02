@@ -1,13 +1,10 @@
-{ hardwareConfig
-, imports ? []
+{ imports ? []
 }@args:
 
 { ... }:
 
 {
   imports = [
-    hardwareConfig
-
     ./hardware
     ./home
     ./nix

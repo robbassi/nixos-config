@@ -3,7 +3,7 @@
 {
   sound.enable = true;
   hardware = {
-    pulseaudio.enable = true;
+    pulseaudio.enable = false;
     bluetooth.enable = true;
   };
 }

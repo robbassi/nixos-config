@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  nix.buildCores = 32;
+  nix.settings.cores = 32;
 }
