@@ -11,6 +11,7 @@ with {
     "${homeManager}/nixos"
     ./bat
     ./vim
+    ./nvim
     ./tmux
     ./git
     ./vscode
