@@ -16,11 +16,11 @@
       ];
       font = {
         normal = {
-          family = "Roboto Mono";
+          family = "Liberation Mono";
           style = "Regular";
         };
         bold = {
-          family = "Roboto Mono";
+          family = "Liberation Mono";
           style = "Regular";
         };
        };

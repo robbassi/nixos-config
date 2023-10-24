@@ -7,6 +7,9 @@ local search = require("search")
 -- Write buffer
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
+-- Clear highlighted search.
+vim.keymap.set('n', '\\', ':nohls<CR>')
+
 -- Close current window
 vim.keymap.set('n', '<leader>wq', ':bd!<CR>')
 

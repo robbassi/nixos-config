@@ -28,7 +28,7 @@ in
         plenary-nvim
 
         # File icons.
-        vim-devicons
+        nvim-web-devicons
 
         # Better synatax highlighting + debug tools.
         nvim-treesitter.withAllGrammars
