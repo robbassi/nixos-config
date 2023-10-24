@@ -24,20 +24,28 @@ in
       enable = true;
       defaultEditor = true;
       plugins = with pkgs.vimPlugins; [
+        # Additional lua libraries.
+        plenary-nvim
+
+        # Better synatax highlighting + debug tools.
         nvim-treesitter.withAllGrammars
         playground
 
+        # Fuzzy search, for different things.
         telescope-nvim
 
-        nui-nvim
-        fine-cmdline-nvim
+        # Manage a set of "marked" files.
+        harpoon
 
+        # Git integration.
         fugitive
         rhubarb
         git-messenger-vim
 
+        # Highlight word under cursor.
         vim-illuminate
 
+        # Color themes.
         rose-pine        
         miasma-nvim
       ];
