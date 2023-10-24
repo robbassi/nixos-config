@@ -27,6 +27,9 @@ in
         # Additional lua libraries.
         plenary-nvim
 
+        # File icons.
+        vim-devicons
+
         # Better synatax highlighting + debug tools.
         nvim-treesitter.withAllGrammars
         playground
@@ -41,9 +44,13 @@ in
         fugitive
         rhubarb
         git-messenger-vim
+        git-blame-nvim
 
         # Highlight word under cursor.
         vim-illuminate
+
+        # Status line plugin.
+        lualine-nvim
 
         # Color themes.
         rose-pine        

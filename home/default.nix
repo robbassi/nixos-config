@@ -35,6 +35,7 @@ with {
         wget
         google-chrome
         fixedsys-excelsior
+        nerdfonts
       ];
     };
   };

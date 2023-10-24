@@ -16,11 +16,11 @@
       ];
       font = {
         normal = {
-          family = "Fixedsys Excelsior 3.01";
+          family = "Roboto Mono";
           style = "Regular";
         };
         bold = {
-          family = "Fixedsys Excelsior 3.01";
+          family = "Roboto Mono";
           style = "Regular";
         };
        };

@@ -1,6 +1,9 @@
 -- Remap the leader key
 vim.g.mapleader = ' '
 
+-- Set encoding.
+vim.o.encoding = 'UTF-8'
+
 -- Indentation
 vim.o.expandtab = true
 vim.o.tabstop = 2
