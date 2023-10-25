@@ -16,6 +16,7 @@ with {
     ./git
     ./vscode
     ./alacritty
+    ./kitty
     ./virtualbox
   ];
 
