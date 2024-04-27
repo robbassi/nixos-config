@@ -2,13 +2,9 @@ local noname = "[unnamed]"
 
 local function extract_filename(win)
 	local b = vim.api.nvim_win_get_buf(win)
-	local fullname = vim.api.nvim_buf_get_name(b)
+	local fullname = vim.fn.expand('%')
   local mod = vim.api.nvim_buf_get_option(b, 'modified') and "◈ " or ""
-	if fullname ~= "" then
-		local shortname = vim.fn.fnamemodify(fullname, ":~:.:gs%(.?[^/])[^/]*/%\1/%")
-		if #shortname > 30 then shortname = vim.fn.fnamemodify(fullname, ":t") end
-		return mod..shortname
-	end
+  return mod..fullname
 end
 
 local function get_best_window_filename(tabpage, window)

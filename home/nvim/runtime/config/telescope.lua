@@ -1,4 +1,5 @@
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 telescope.setup({
   defaults = {
     sorting_strategy = 'ascending',
@@ -12,7 +13,13 @@ telescope.setup({
       },
     },
     color_devicons = false,
-    preview = false
+    preview = false,
+    mappings = {
+      i = {
+        ["<C-Down>"] = actions.cycle_history_next,
+        ["<C-Up>"] = actions.cycle_history_prev,
+      },
+    },
   }
 })
 

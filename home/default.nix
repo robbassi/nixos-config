@@ -2,7 +2,7 @@
 
 with {
   homeManager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
+    url = "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
   };
 };
 
