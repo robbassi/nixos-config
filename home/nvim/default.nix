@@ -6,17 +6,8 @@ with {
     src = pkgs.fetchFromGitHub {
       owner = "xero";
       repo = "miasma.nvim";
-      rev = "fe75187d87461c1c83783b35c17f2be509126cf0";
-      hash = "sha256-qEVQYZPlKt2b266W+14OlRP4TRT5z+vzyrOuuBeaQ9E=";
-    };
-  };
-  fine-cmdline-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "fine-cmdline-nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "VonHeikemen";
-      repo = "fine-cmdline.nvim";
-      rev = "ead2b85e455eacde10469a8fcf1a717822d2bb9a";
-      hash = "sha256-0aYHz6uRMVjctrDo8JKlTIUP2Oj+MrhBvgXRIwo/ueU=";
+      rev = "c672feec07d4e77ac485ee58e3432a96ebe51953";
+      hash = "sha256-p+8coWDvX4Vy3SIK4f9teAivUSMM3RH/0XkUbV4Z7aA=";
     };
   };
 };
