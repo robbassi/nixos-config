@@ -1,9 +1,17 @@
 { config, pkgs, lib, ... }:
 
 with lib;
-with {
+with rec {
   homeManager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+  };
+  pkgs-master = builtins.fetchTarball {
+    url = "https://github.com/nixos/nixpkgs/archive/master.tar.gz";
+  };
+  latest = import pkgs-master { 
+    config = { 
+      allowUnfree = true; 
+    }; 
   };
 };
 
@@ -42,7 +50,7 @@ with {
           ripgrep
           silver-searcher
           wget
-          google-chrome
+          latest.google-chrome
           fixedsys-excelsior
           nerdfonts
         ];
