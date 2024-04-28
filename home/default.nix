@@ -20,24 +20,26 @@ with {
     ./virtualbox
   ];
 
-  home-manager.users.rob = {
-    nixpkgs.config = {
-      allowUnfree = true;
-    };
+  config = {
+    home-manager.users.${config.nixos-config.user.name} = {
+      nixpkgs.config = {
+        allowUnfree = true;
+      };
 
-    home = {
-      stateVersion = "21.05";
-      packages = with pkgs; [
-        fd
-        htop
-        tree
-        ripgrep
-        silver-searcher
-        wget
-        google-chrome
-        fixedsys-excelsior
-        nerdfonts
-      ];
+      home = {
+        stateVersion = "21.05";
+        packages = with pkgs; [
+          fd
+          htop
+          tree
+          ripgrep
+          silver-searcher
+          wget
+          google-chrome
+          fixedsys-excelsior
+          nerdfonts
+        ];
+      };
     };
   };
 }

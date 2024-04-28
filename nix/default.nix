@@ -1,6 +1,19 @@
-{ ... }:
+{ config, lib, ... }:
+
+with lib;
 
 {
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  options = {
+    nixos-config.nix.cores = mkOption {
+      type = types.ints.positive;
+    };
+  };
+
+  config = {
+    nixpkgs.config.allowUnfree = true;
+    nix.settings = {
+      cores = config.nixos-config.nix.cores;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
 }
