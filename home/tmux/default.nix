@@ -1,7 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
-  home-manager.users.rob.programs.tmux = {
+  nixos-config.programs.tmux = {
     enable = true;
     plugins = with pkgs.tmuxPlugins; [];
     extraConfig = ''

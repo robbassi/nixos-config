@@ -1,6 +1,7 @@
-{ config, pkgs, lib, ... }:
-let
-  miasma-nvim = pkgs.vimUtils.buildVimPluginFrom2Nix {
+{ pkgs, ... }:
+
+with {
+  miasma-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "miasma-nvim";
     src = pkgs.fetchFromGitHub {
       owner = "xero";
@@ -9,7 +10,7 @@ let
       hash = "sha256-qEVQYZPlKt2b266W+14OlRP4TRT5z+vzyrOuuBeaQ9E=";
     };
   };
-  fine-cmdline-nvim = pkgs.vimUtils.buildVimPluginFrom2Nix {
+  fine-cmdline-nvim = pkgs.vimUtils.buildVimPlugin {
     name = "fine-cmdline-nvim";
     src = pkgs.fetchFromGitHub {
       owner = "VonHeikemen";
@@ -18,52 +19,53 @@ let
       hash = "sha256-0aYHz6uRMVjctrDo8JKlTIUP2Oj+MrhBvgXRIwo/ueU=";
     };
   };
-in 
-  {
-    home-manager.users.rob.programs.neovim = {
-      enable = true;
-      defaultEditor = true;
-      plugins = with pkgs.vimPlugins; [
-        # Additional lua libraries.
-        plenary-nvim
+};
 
-        # File icons.
-        nvim-web-devicons
+{
+  nixos-config.programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [
+      # Additional lua libraries.
+      plenary-nvim
 
-        # Better synatax highlighting + debug tools.
-        nvim-treesitter.withAllGrammars
-        playground
+      # File icons.
+      nvim-web-devicons
 
-        # Fuzzy search, for different things.
-        telescope-nvim
+      # Better synatax highlighting + debug tools.
+      nvim-treesitter.withAllGrammars
+      playground
 
-        # Manage a set of "marked" files.
-        harpoon
+      # Fuzzy search, for different things.
+      telescope-nvim
 
-        # Git integration.
-        fugitive
-        rhubarb
-        git-messenger-vim
-        git-blame-nvim
+      # Manage a set of "marked" files.
+      harpoon
 
-        # Highlight word under cursor.
-        vim-illuminate
+      # Git integration.
+      fugitive
+      rhubarb
+      git-messenger-vim
+      git-blame-nvim
 
-        # Status line plugin.
-        lualine-nvim
+      # Highlight word under cursor.
+      vim-illuminate
 
-        # Color themes.
-        rose-pine        
-        miasma-nvim
-      ];
+      # Status line plugin.
+      lualine-nvim
 
-      extraConfig = ''
-        set runtimepath+=${./runtime}
-        luafile ${./runtime/init.lua}
-      '';
+      # Color themes.
+      rose-pine        
+      miasma-nvim
+    ];
 
-      extraPackages = [
-        pkgs.xclip
-      ];
-    };
-  }
+    extraConfig = ''
+      set runtimepath+=${./runtime}
+      luafile ${./runtime/init.lua}
+    '';
+
+    extraPackages = [
+      pkgs.xclip
+    ];
+  };
+}

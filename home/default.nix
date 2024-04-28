@@ -1,8 +1,17 @@
 { config, pkgs, lib, ... }:
 
-with {
+with lib;
+with rec {
   homeManager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+  };
+  pkgs-master = builtins.fetchTarball {
+    url = "https://github.com/nixos/nixpkgs/archive/master.tar.gz";
+  };
+  latest = import pkgs-master { 
+    config = { 
+      allowUnfree = true; 
+    }; 
   };
 };
 
@@ -20,24 +29,33 @@ with {
     ./virtualbox
   ];
 
-  home-manager.users.rob = {
-    nixpkgs.config = {
-      allowUnfree = true;
+  options = {
+    nixos-config.programs = mkOption {
+      type = types.anything;
+      default = {};
     };
+  };
 
-    home = {
-      stateVersion = "21.05";
-      packages = with pkgs; [
-        fd
-        htop
-        tree
-        ripgrep
-        silver-searcher
-        wget
-        google-chrome
-        fixedsys-excelsior
-        nerdfonts
-      ];
+  config = {
+    home-manager.users.${config.nixos-config.user.name} = {
+      nixpkgs.config = {
+        allowUnfree = true;
+      };
+      home = {
+        stateVersion = "21.05";
+        packages = with pkgs; [
+          fd
+          htop
+          tree
+          ripgrep
+          silver-searcher
+          wget
+          latest.google-chrome
+          fixedsys-excelsior
+          nerdfonts
+        ];
+      };
+      programs = config.nixos-config.programs;
     };
   };
 }

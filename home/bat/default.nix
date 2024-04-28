@@ -1,7 +1,5 @@
-{ config, pkgs, lib, ... }:
-
 {
-  home-manager.users.rob.programs.bat = {
+  nixos-config.programs.bat = {
     enable = true;
     config = {
       theme = "base16";
