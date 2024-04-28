@@ -18,6 +18,7 @@ with rec {
 {
   imports = [
     "${homeManager}/nixos"
+    ./dconf
     ./bat
     ./vim
     ./nvim
@@ -31,6 +32,10 @@ with rec {
 
   options = {
     nixos-config.programs = mkOption {
+      type = types.anything;
+      default = {};
+    };
+    nixos-config.dconf = mkOption {
       type = types.anything;
       default = {};
     };
@@ -55,6 +60,7 @@ with rec {
           nerdfonts
         ];
       };
+      dconf = config.nixos-config.dconf;
       programs = config.nixos-config.programs;
     };
   };
