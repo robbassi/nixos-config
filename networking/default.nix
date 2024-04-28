@@ -12,7 +12,8 @@ with lib;
   config = {
     networking = {
       hostName = config.nixos-config.networking.hostname;
-      wireless.enable = true;
+      networkmanager.enable = true;
+      wireless.enable = false;
       firewall = {
         enable = false;
         allowedTCPPorts = [ ];

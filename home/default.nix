@@ -20,14 +20,10 @@ with rec {
     "${homeManager}/nixos"
     ./dconf
     ./bat
-    ./vim
     ./nvim
-    ./tmux
     ./git
     ./vscode
-    ./alacritty
     ./kitty
-    ./virtualbox
   ];
 
   options = {
