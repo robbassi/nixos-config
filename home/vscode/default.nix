@@ -1,6 +1,7 @@
 { pkgs, ... }:
+
 {
-  home-manager.users.rob.programs.vscode = {
+  nixos-config.programs.vscode = {
     enable = true;
 
     userSettings = {

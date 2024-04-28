@@ -1,7 +1,5 @@
-{ config, pkgs, lib, ... }:
-
 {
-  home-manager.users.rob.programs.alacritty = {
+  nixos-config.programs.alacritty = {
     enable = true;
     settings = {
       env = {

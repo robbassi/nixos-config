@@ -1,10 +1,9 @@
-{ ... }:
+{ config, ... }:
 
 {
-  home-manager.users.rob.programs.git = {
+  nixos-config.programs.git = {
     enable = true;
-
-    userName = "Rob Bassi";
-    userEmail = "rob.bassi.89@gmail.com";
+    userName = config.nixos-config.user.fullname;
+    userEmail = config.nixos-config.user.email;
   };
 }

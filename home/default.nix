@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
 
+with lib;
 with {
   homeManager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
@@ -20,12 +21,18 @@ with {
     ./virtualbox
   ];
 
+  options = {
+    nixos-config.programs = mkOption {
+      type = types.anything;
+      default = {};
+    };
+  };
+
   config = {
     home-manager.users.${config.nixos-config.user.name} = {
       nixpkgs.config = {
         allowUnfree = true;
       };
-
       home = {
         stateVersion = "21.05";
         packages = with pkgs; [
@@ -40,6 +47,7 @@ with {
           nerdfonts
         ];
       };
+      programs = config.nixos-config.programs;
     };
   };
 }

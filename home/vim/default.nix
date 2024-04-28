@@ -1,7 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
-let
-	vim-gotham= pkgs.vimUtils.buildVimPluginFrom2Nix {
+with {
+	vim-gotham= pkgs.vimUtils.buildVimPlugin {
     name = "vim-gotham";
     src = pkgs.fetchFromGitHub {
       owner = "whatyouhide";
@@ -10,28 +10,29 @@ let
       hash = "sha256-A2QHnCkSnnrEN/lbl/p1fQSjojtOwoK7CyH/RAwucac=";
     };
   };
-in
-	{
-		home-manager.users.rob.programs.vim = {
-			enable = true;
-			plugins = with pkgs.vimPlugins; [
-				haskell-vim
-				vim-nix
-				nerdcommenter
-				rainbow_parentheses
-				airline
-				fzf-vim
-				nord-vim
-				YouCompleteMe
-				vim-lsp
-				solidity
-				vim-gotham
-        vim-colorschemes
-        vim-airline-themes
-        base16-vim
-        zig-vim
-			];
+};
 
-			extraConfig = builtins.readFile ./vimrc;
-		};
-	}
+{
+  nixos-config.programs.vim = {
+    enable = true;
+    plugins = with pkgs.vimPlugins; [
+      haskell-vim
+      vim-nix
+      nerdcommenter
+      rainbow_parentheses
+      airline
+      fzf-vim
+      nord-vim
+      YouCompleteMe
+      vim-lsp
+      solidity
+      vim-gotham
+      vim-colorschemes
+      vim-airline-themes
+      base16-vim
+      zig-vim
+    ];
+
+    extraConfig = builtins.readFile ./vimrc;
+  };
+}

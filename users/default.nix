@@ -12,6 +12,10 @@ with lib;
       type = types.str;
       default = "Rob Bassi";
     };
+    nixos-config.user.email = mkOption {
+      type = types.str;
+      default = "rob.bassi.89@gmail.com";
+    };
   };
 
   config = {
