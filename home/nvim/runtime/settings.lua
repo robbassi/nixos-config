@@ -22,4 +22,4 @@ vim.o.showtabline = 2
 vim.o.cursorline = true
 
 -- Color column (80 chars)
-vim.o.colorcolumn = '80'
+vim.o.colorcolumn = '80,81'
