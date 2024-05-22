@@ -21,13 +21,13 @@ vim.cmd([[
 
   " misc
 
-  hi ColorColumn      guisp=NONE guifg=NONE guibg=#004422 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi ColorColumn      guisp=NONE guifg=NONE guibg=#333333 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Conceal          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Cursor           guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi lCursor          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi CursorIM         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi CursorColumn     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi CursorLine       guisp=NONE guifg=NONE guibg=#004422 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi CursorLine       guisp=NONE guifg=NONE guibg=#333333 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Directory        guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi DiffAdd          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi DiffChange       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -53,7 +53,7 @@ vim.cmd([[
   hi PmenuSbar        guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi PmenuThumb       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Question         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi QuickFixLine     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi QuickFixLine     guisp=NONE guifg=#ffffff guibg=#333333 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Search           guisp=NONE guifg=#ffffff guibg=#2244ff ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi SpecialKey       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi SpellBad         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -69,7 +69,7 @@ vim.cmd([[
   hi TabLineSel       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Terminal         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Title            guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Visual           guisp=NONE guifg=NONE guibg=#3c3c3c ctermfg=233 ctermbg=234 gui=NONE cterm=NONE
+  hi Visual           guisp=NONE guifg=NONE guibg=#333333 ctermfg=233 ctermbg=234 gui=NONE cterm=NONE
   hi VisualNOS        guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi WarningMsg       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi WildMenu         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -80,11 +80,11 @@ vim.cmd([[
   hi Comment    guisp=NONE guifg=#888888 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Constant   guisp=NONE guifg=#33ff99 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Identifier guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Statement  guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Statement  guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi PreProc    guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Type       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=bold cterm=NONE
-  hi Special    guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Underlined guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Special    guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=bold cterm=NONE
+  hi Underlined guisp=NONE guifg=NONE guibg=NONE ctermfg=231 ctermbg=234 gui=underline cterm=NONE
   hi Ignore     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Error      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Todo       guisp=NONE guifg=#ff6633 guibg=NONE ctermfg=231 ctermbg=234 gui=bold cterm=NONE
@@ -96,23 +96,23 @@ vim.cmd([[
   hi Number         guisp=NONE guifg=#33ff99 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Boolean        guisp=NONE guifg=#33ff99 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Float          guisp=NONE guifg=#33ff99 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Function       guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Conditional    guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Repeat         guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Label          guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Operator       guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Keyword        guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Exception      guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Include        guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Define         guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Macro          guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi PreCondit      guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi StorageClass   guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Structure      guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Typedef        guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi SpecialChar    guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Tag            guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Function       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Conditional    guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Repeat         guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Label          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Operator       guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Keyword        guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Exception      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Include        guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Define         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Macro          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi PreCondit      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi StorageClass   guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Structure      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Typedef        guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi SpecialChar    guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Tag            guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Delimiter      guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi SpecialComment guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Debug          guisp=NONE guifg=#dddddd guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi SpecialComment guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Debug          guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 ]])
