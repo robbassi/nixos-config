@@ -54,8 +54,8 @@ function Tabline()
 		local hi = tabpage == current and "%#TabLineSel#" or "%#TabLine#"
 		local hiSep = tabpage == current and "%#TabLineSelSep#" or "%#TabLineSep#"
 		table.insert(tl, "%" .. i .. "T") -- mouse click target region
-		table.insert(tl, hi .. " " .. getname(tabpage) .. " ")
-		table.insert(tl, hiSep .. "▓▒░ " .. hi)
+		table.insert(tl, hi .. " " .. getname(tabpage) .. "")
+		table.insert(tl, hiSep .. ": " .. hi)
 	end
 	table.insert(tl, "%T") -- end mouse click region(s).
 	table.insert(tl, "%#TabLineFill#")
