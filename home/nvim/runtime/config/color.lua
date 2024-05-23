@@ -40,7 +40,7 @@ vim.cmd([[
   hi FoldColumn       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi SignColumn       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi IncSearch        guisp=NONE guifg=#ffffff guibg=#ff3344 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi LineNr           guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi LineNr           guisp=NONE guifg=#bbbbbb guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi LineNrAbove      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi LineNrBelow      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi CursorLineNr     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -60,13 +60,13 @@ vim.cmd([[
   hi SpellCap         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi SpellLocal       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi SpellRare        guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi StatusLine       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi StatusLine       guisp=NONE guifg=#010101 guibg=#ffffff ctermfg=231 ctermbg=234 gui=bold cterm=NONE
   hi StatusLineNC     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi StatusLineTerm   guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi StatusLineTermNC guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi TabLine          guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi TabLineFill      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi TabLineSel       guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi TabLineSel       guisp=NONE guifg=#010101 guibg=#ffffff ctermfg=231 ctermbg=234 gui=bold cterm=NONE
   hi Terminal         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Title            guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Visual           guisp=NONE guifg=NONE guibg=#333333 ctermfg=233 ctermbg=234 gui=NONE cterm=NONE
@@ -77,7 +77,7 @@ vim.cmd([[
   " major
 
   hi Normal     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Comment    guisp=NONE guifg=#888888 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+  hi Comment    guisp=NONE guifg=#666666 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Constant   guisp=NONE guifg=#33ff99 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Identifier guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Statement  guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -87,7 +87,7 @@ vim.cmd([[
   hi Underlined guisp=NONE guifg=NONE guibg=NONE ctermfg=231 ctermbg=234 gui=underline cterm=NONE
   hi Ignore     guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
   hi Error      guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-  hi Todo       guisp=NONE guifg=#ff6633 guibg=NONE ctermfg=231 ctermbg=234 gui=bold cterm=NONE
+  hi Todo       guisp=NONE guifg=#000000 guibg=#ffffff ctermfg=231 ctermbg=234 gui=bold cterm=NONE
 
   " minor
 

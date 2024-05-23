@@ -16,7 +16,7 @@ vim.o.number = true
 vim.o.mouse = nil
 
 -- Tabs
-vim.o.showtabline = 2
+vim.o.showtabline = 0
 
 -- Cursorline
 vim.o.cursorline = true
