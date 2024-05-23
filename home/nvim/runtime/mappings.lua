@@ -41,4 +41,6 @@ end)
 vim.keymap.set('i', '<C-o>', '<Esc>:normal o<CR>:startinsert<CR>')
 vim.keymap.set('i', '<C-i>', '<Esc>:normal O<CR>:startinsert<CR>')
 
-
+-- Use system clipboard by default for yank operations
+vim.keymap.set('n', 'yy', '"+yy')
+vim.keymap.set('v', 'y', '"+y')
