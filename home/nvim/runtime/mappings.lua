@@ -38,8 +38,8 @@ vim.keymap.set('n', '<leader>cc', function ()
 end)
 
 -- Insert line above or below in insert mode
-vim.keymap.set('i', '<C-o>', '<Esc>:normal o<CR>:startinsert<CR>')
-vim.keymap.set('i', '<C-i>', '<Esc>:normal O<CR>:startinsert<CR>')
+-- vim.keymap.set('i', '<C-o>', '<Esc>:normal o<CR>:startinsert<CR>')
+-- vim.keymap.set('i', '<C-i>', '<Esc>:normal O<CR>:startinsert<CR>')
 
 -- Use system clipboard by default for yank operations
 vim.keymap.set('n', 'yy', '"+yy')
