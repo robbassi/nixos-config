@@ -11,16 +11,15 @@ vim.o.shiftwidth = 2
 
 -- Line numbers
 vim.o.number = true
-vim.o.relativenumber = true
 
 -- Mouse
 vim.o.mouse = nil
 
 -- Tabs
-vim.o.showtabline = 2
+vim.o.showtabline = 0
 
 -- Cursorline
 vim.o.cursorline = true
 
 -- Color column (80 chars)
-vim.o.colorcolumn = '80'
+vim.o.colorcolumn = '80,81'
