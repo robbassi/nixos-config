@@ -4,6 +4,8 @@
   nixos-config.programs.neovim = {
     enable = true;
     defaultEditor = true;
+    withRuby = false;
+    withPython3 = false;
     plugins = with pkgs.vimPlugins; [
       # Additional lua libraries.
       plenary-nvim
@@ -13,7 +15,9 @@
 
       # Better synatax highlighting + debug tools.
       nvim-treesitter.withAllGrammars
-      playground
+
+      # LSP
+      nvim-lspconfig
 
       # Fuzzy search, for different things.
       telescope-nvim
@@ -22,8 +26,8 @@
       harpoon
 
       # Git integration.
-      fugitive
-      rhubarb
+      vim-fugitive
+      vim-rhubarb
 
       # Status line plugin.
       lualine-nvim
@@ -31,11 +35,12 @@
 
     extraConfig = ''
       set runtimepath+=${./runtime}
-      luafile ${./runtime/init.lua}
+      luafile ${./runtime}/init.lua
     '';
 
     extraPackages = [
       pkgs.xclip
+      pkgs.clang-tools
     ];
   };
 }
