@@ -10,7 +10,7 @@
           "google-chrome.desktop"
           "kitty.desktop"
           "org.gnome.Nautilus.desktop"
-          "gnome-system-monitor.desktop"
+          "org.gnome.SystemMonitor.desktop"
         ];
       };
     };
