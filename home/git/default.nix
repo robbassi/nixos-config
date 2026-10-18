@@ -3,7 +3,9 @@
 {
   nixos-config.programs.git = {
     enable = true;
-    userName = config.nixos-config.user.fullname;
-    userEmail = config.nixos-config.user.email;
+    settings.user = {
+      name = config.nixos-config.user.fullname;
+      email = config.nixos-config.user.email;
+    };
   };
 }
