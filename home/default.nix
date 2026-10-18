@@ -3,7 +3,7 @@
 with lib;
 with rec {
   homeManager = builtins.fetchTarball {
-    url = "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+    url = "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
   };
   pkgs-master = builtins.fetchTarball {
     url = "https://github.com/nixos/nixpkgs/archive/master.tar.gz";
@@ -49,11 +49,11 @@ with rec {
           htop
           tree
           ripgrep
-          silver-searcher
           wget
           latest.google-chrome
           fixedsys-excelsior
-          nerdfonts
+          nerd-fonts.liberation
+          tmux
         ];
       };
       dconf = config.nixos-config.dconf;
