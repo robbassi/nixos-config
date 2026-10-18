@@ -13,7 +13,7 @@ with lib;
     networking = {
       hostName = config.nixos-config.networking.hostname;
       networkmanager.enable = true;
-      wireless.enable = false;
+      nameservers = [ "1.1.1.1" "8.8.8.8" ];
       firewall = {
         enable = false;
         allowedTCPPorts = [ ];
