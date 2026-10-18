@@ -14,7 +14,7 @@ vim.keymap.set('n', '\\', ':nohls<CR>')
 vim.keymap.set('n', '<leader>wq', ':bd!<CR>')
 
 -- Search for word under cursor
-vim.keymap.set('n', '<leader>lw', search.word_under_cursor)
+vim.keymap.set('n', '<leader>lw', ':Telescope grep_string<CR>')
 
 -- Search for word (prompt)
 vim.keymap.set('n', '<leader>sw', search.input_word)
